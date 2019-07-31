@@ -34,7 +34,8 @@ function count(input, expression) {
     var str = input.toLowerCase();
     var count = 0;
 
-    for (let c in input.toLowerCase()) {
+    // replace for with for..of
+    for (let c of input.toLowerCase()) {
         if (c.match(expression))
             count++;
     }
